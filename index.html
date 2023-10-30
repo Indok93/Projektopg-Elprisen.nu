@@ -3,32 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/assets/css/main.css">
-    <script src="/assets/js/script.js" defer></script>
+    <title>Projekt Elpris</title>
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <script src="./assets/js/script.js" defer></script>
+    <link rel="manifest" href="./manifest.json">
+    <script src="https://kit.fontawesome.com/7631ec8517.js" crossorigin="anonymous"></script>
 </head>
 <body>
     
     <div class="MainContainer">
         <nav id="navigation">
-            <img src="" alt="logo">
+            <img src="./assets/AppImages/windows11/SmallTile.scale-100.png" alt="logo">
             <ul>
-                <li><a href="#">oversigt</a></li>
-                <li><a href="#">lige nu</a></li>
-                <li><a href="#">historik</a></li>
+                <li><a href="#Oversigt">oversigt</a></li>
+                <li><a href="#LigeNu" class="green-text">lige nu</a></li>
+                <li><a href="#Historik">historik</a></li>
             </ul>
         </nav>
         <section id="mainContents">
+            <i class="fa-solid fa-gear gearPosition"></i>
             <h1>elprisen lige nu</h1>
             <div class="ElprisBackground">
-                <input type="text" id="ElprisNu" placeholder="pris i kroner">
+                <p id="ElprisNu"></p>
                 <p>pr. kwh</p>
             </div>
-            <p id="tidNu"></p>
+            <p id="tidNu">tid</p>
         </section>
         <footer>
-            <p>Priserne er ex. moms og afgrifter</p>
-            <p>Du vises lige nu priserne for Øst Danmark</p>
+            <p>Priserne er <span class="green-text">ex. moms</span> og afgrifter</p>
+            <p>Du vises lige nu priserne for <span class="green-text">Øst Danmark</span></p>
         </footer>
     </div>
 
