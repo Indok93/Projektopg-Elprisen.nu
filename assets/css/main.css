@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #EBEBEB;
+}
+
+/* Wrapper */
+.MainContainer{
+    width: 375px;
+    height: 812px;
+    background-color: #201E1E;
+    position: relative;
+}
+
+/* Navigation */
+#navigation {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    height: 50px;
+}
+
+#navigation img {
+
+}
+
+#navigation ul {
+
+}
+
+#navigation ul li {
+    display: inline;
+    padding: 0.5em;
+}
+
+#navigation ul li a {
+    text-decoration: none;
+    color: #EBEBEB;
+}
+
+/* Contents */
+#mainContents {
+    background-color: #27282B;
+    height: 600px;
+}
+#mainContents h1 {
+    color: #EBEBEB;
+    text-align: center;
+}
+#mainContents div {
+    text-align: center;
+}
+#mainContents div input {
+
+}
+#mainContents div p {
+    color: #EBEBEB;
+}
+#mainContents p {
+
+}
+
+
+/* Footer */
+footer {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+}
+
+footer p {
+    color: #EBEBEB;
+}
