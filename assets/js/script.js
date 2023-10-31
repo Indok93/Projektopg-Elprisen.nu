@@ -1,4 +1,11 @@
 
+
+const buttonSettings = document.getElementById('settingsWheel');
+// console.log(buttonSettings);
+buttonSettings.addEventListener('click', (event) => {
+    window.location.href = './indstillinger.html';
+});
+
 const apiEndpoint = " https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json";
 
 fetch(apiEndpoint)

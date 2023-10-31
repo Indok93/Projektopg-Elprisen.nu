@@ -261,8 +261,106 @@ body{
 }
 
 /* Indstillinger */
+.momsBox {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 283px;
+    left: 68px;
+    width: 239px;
+    height: 30px;
+    color: #EBEBEB;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    position: relative;
+}
+.slideButtonOff {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #201E1E;
+    width: 63px;
+    height: 30px;
+    border-radius: 30px 30px 30px 30px;
 
-
+}
+.slideButtonOff::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    background-color: #55EC20;
+    border: 1px dashed rgba(85, 236, 32, 1);
+    border-radius: 50%;
+}
+.alarmBox {
+    position: absolute;
+    top: 359px;
+    left: 68px;
+    width: 237px;
+    height: 31px;
+    color: #EBEBEB;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+.slideButtonOn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #201E1E;
+    width: 63px;
+    height: 30px;
+    border-radius: 30px 30px 30px 30px;
+}
+.slideButtonOn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    background-color: #201E1E;
+    width: 63px;
+    height: 30px;
+    border-radius: 30px 30px 30px 30px;
+    border: 1px dashed rgba(85, 236, 32, 1);
+    
+}
+.slideButtonOn::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 30px;
+    height: 30px;
+    background-color: #55EC20;
+    border: 1px dashed rgba(85, 236, 32, 1);
+    border-radius: 50%;
+}
+.chooseRegion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 433px;
+    left: 68px;
+    width: 239px;
+    height: 88px;
+    color: #EBEBEB;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+#regionPick {
+    background-color: #201E1E;
+    color: #EBEBEB;
+    text-transform: uppercase;
+    height: 30px;
+    border-style: none;
+    font-size: 0.8em;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+}
+#regionPick option {
+    text-align: center;
+}
 
 /* Footer */
 footer {
