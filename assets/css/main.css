@@ -45,6 +45,7 @@ body{
     text-decoration: none;
     color: #EBEBEB;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* Contents */
@@ -67,8 +68,9 @@ body{
     position: absolute;
     top: 100px;
     width: 100%;
+    font-weight: 300;
 }
-#mainContents div {
+.ElprisBackground {
     box-sizing: border-box;
     position: absolute;
     width: 277px;
@@ -81,7 +83,7 @@ body{
     border-radius: 50%;
     position: relative;
 }
-#mainContents div::before {
+.ElprisBackground::before {
     content: "";
     position: absolute;
     top: 15px;
@@ -91,7 +93,7 @@ body{
     border: 1px dashed rgba(85, 236, 32, 0.5);
     border-radius: 50%;
 }
-#mainContents div::after {
+.ElprisBackground::after {
     content: "";
     position: absolute;
     top: 30px;
@@ -100,6 +102,82 @@ body{
     height: 217px;
     border: 1px dashed rgba(85, 236, 32, 1);
     border-radius: 50%;
+}
+.Price-Content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 42px;
+    width: 266px;
+    height: 139px;
+    position: absolute;
+    top: 160px;
+    left: 54px;
+    position: relative;
+}
+.Price-Content p {
+    color: #EBEBEB;
+}
+.Low-price {
+    text-align: center;
+    box-sizing: border-box;
+    width: 112px;
+    height: 112px;
+    background: #201E1E;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    position: relative;
+
+}
+.Low-price::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 102px;
+    height: 102px;
+    border: 1px dashed rgba(85, 236, 32, 1);
+    border-radius: 50%;
+}
+#ElPriceLow {
+    margin-top: 2em;
+}
+.High-price {
+    text-align: center;
+    box-sizing: border-box;
+    width: 112px;
+    height: 112px;
+    background: #201E1E;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25), inset 0px 0px 2px 2px rgba(255, 255, 255, 0.25);
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.High-price::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: 102px;
+    height: 102px;
+    border: 1px dashed rgba(85, 236, 32, 1);
+    border-radius: 50%;
+}
+#ElPriceHigh {
+    margin-top: 2em;
+}
+.kwh-Text {
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+.bottomText{
+    margin-top: 3.5em;
+    text-transform: uppercase;
+    font-size: 1em;
+    font-weight: 300;
 }
 .ElprisBackground p{
     color: #55EC20;
@@ -127,6 +205,63 @@ body{
     width: 100%;
     text-align: center;
 }
+/* Oversigt */
+.Upcoming-prices{
+    width: 307px;
+    height: 330px;
+    position: absolute;
+    top: 325px;
+    left: 34px;
+    border-radius: 10px;
+}
+.price-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5em 0;
+    background-color: #201E1E;
+    border-radius: 5px;
+    font-size: 1.2em;
+    padding: 4px;
+    box-shadow: 0px 0px 8px 2px #5B5B5B80;
+}
+.price-box p {
+    text-align: center;
+    color: #EBEBEB;
+    width: 136px;
+}
+
+/* Historik */
+.Calendar-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    top: 150px;
+    left: 35px;
+    width: 305px;
+    text-align: center;
+    background-color: #201E1E;
+    box-shadow: 0px 0px 8px 2px #5B5B5B80;
+    border-radius: 5px;
+    color: #EBEBEB;
+    padding: 10px 0;
+}
+.calendar-pos{
+    text-align: right;
+    margin-right: 1.5em;
+    color: #55EC20;
+}
+#chosen-date {
+    position: absolute;
+    top: 300px;
+    text-align: center;
+    width: 100%;
+    color: #EBEBEB;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+/* Indstillinger */
+
 
 
 /* Footer */
@@ -149,5 +284,5 @@ footer p:first-child{
 }
 .green-text{
     color: #55EC20 !important;
-    margin: 0 0.2em;
+    /* margin: 0 0.2em; */
 }
