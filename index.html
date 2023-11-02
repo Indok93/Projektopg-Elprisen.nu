@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projekt Elpris</title>
     <link rel="stylesheet" href="./assets/css/main.css">
-    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="./assets/js/script.js" defer></script>
     <link rel="manifest" href="./manifest.json">
     <script src="https://kit.fontawesome.com/7631ec8517.js" crossorigin="anonymous"></script>
 </head>
@@ -64,6 +64,11 @@
                 <p id="slotEight"></p>
                 <p id="slotEightPrice"></p>
             </div></div>
+            <select name="regionPick" id="regionPick" style="display: none;">
+                <option value="#" selected style="display: none;">vælg region</option>
+                <option value="#regionEast" id="east">region øst</option>
+                <option value="#RegionWest" id="west">region vest</option>
+            </select>
         <footer>
             <p>Priserne er <span class="green-text">ex. moms</span> og afgrifter</p>
             <p>Du vises lige nu priserne for <span class="green-text">Øst Danmark</span></p>
