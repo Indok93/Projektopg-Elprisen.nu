@@ -142,7 +142,7 @@ body{
     border-radius: 50%;
 }
 #ElPriceLow {
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
 .High-price {
     text-align: center;
@@ -167,7 +167,7 @@ body{
     border-radius: 50%;
 }
 #ElPriceHigh {
-    margin-top: 2em;
+    margin-top: 2.5em;
 }
 .kwh-Text {
     font-size: 0.7em;
