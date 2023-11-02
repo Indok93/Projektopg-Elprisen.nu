@@ -384,3 +384,11 @@ footer p:first-child{
     color: #55EC20 !important;
     /* margin: 0 0.2em; */
 }
+
+/* Media query for desktop */
+@media (min-width: 768px) {
+    .MainContainer {
+        width: 100%;
+        height: auto;
+    }
+}

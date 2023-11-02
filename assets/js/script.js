@@ -8,7 +8,21 @@ buttonSettings.addEventListener('click', () => {
     window.location.href = './indstillinger.html';
 });
 
-const apiEndpoint = "https://www.elprisenligenu.dk/api/v1/prices/2023/10-30_DK2.json";
+currentDate = new Date();
+// console.log(currentDate);
+
+//Format the date as YYYY/MM-DD
+const year = currentDate.getFullYear();
+const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
+const day = currentDate.getDate().toString().padStart(2, '0');
+// console.log(month);
+// console.log(year);
+// console.log(day);
+
+const formattedDate = `${year}/${month}-${day}`;
+// console.log(formattedDate);
+
+const apiEndpoint = `https://www.elprisenligenu.dk/api/v1/prices/${formattedDate}_DK2.json`;
 
 fetch(apiEndpoint)
 .then((response) => {
@@ -70,14 +84,19 @@ function getCurrentPriceData(data) {
 
     const currentHourData = data[currentHour];
     // console.log(currentHourData);
-    // console.log(currentHourData.DKK_per_kWh);
+
+    const currentPrice = currentHourData.DKK_per_kWh;
+    // console.log(currentPrice);
+
+    const currentPriceDecimals = currentPrice.toFixed(3);
+    // console.log(currentPriceDecimals);
 
     // Target element for displaying the data
     const targetElementId = document.getElementById('ElprisNu');
 
     // Make a variable for the data
     let priceNowDkk = "";
-    priceNowDkk = `${currentHourData.DKK_per_kWh} KR`;
+    priceNowDkk = `${currentPriceDecimals} KR`;
 
     // console.log(priceNowDkk);
     targetElementId.innerHTML = priceNowDkk;
@@ -92,8 +111,11 @@ function overview(dataArray) {
     const allDataDkk = allData.map(item => item.DKK_per_kWh);
     // console.log(allDataDkk);
 
-    const lowestNumber = Math.min(...allDataDkk);
-    const highestNumber = Math.max(...allDataDkk);
+    const allDataDkkDecimals = allDataDkk.map((items) => items.toFixed(3));
+    // console.log(allDataDkkDecimals);
+
+    const lowestNumber = Math.min(...allDataDkkDecimals);
+    const highestNumber = Math.max(...allDataDkkDecimals);
     
     // console.log("Lowest number:", lowestNumber);
     // console.log("Highest number:", highestNumber);
@@ -131,7 +153,7 @@ function overviewList(extractedData) {
     // console.log(priceSlots);
 
     const formattedPriceSlots = priceSlots.map((items) => items.toFixed(3));
-    console.log(formattedPriceSlots);
+    // console.log(formattedPriceSlots);
     
     const formattedTimeSlots = timeSlots.map((timeSlots) => {
         const date = new Date (timeSlots);
