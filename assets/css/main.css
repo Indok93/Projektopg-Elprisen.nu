@@ -60,6 +60,7 @@ body{
     right: 1em;
     font-size: 1.5em;
     color: #55EC20;
+    cursor: pointer;
 }
 #mainContents h1 {
     color: #EBEBEB;
