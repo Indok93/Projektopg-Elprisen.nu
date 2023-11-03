@@ -1,7 +1,7 @@
 {
     "name": "PWA Elpris Nu",
 	"short_name": "Elpris",
-    "description": "Application that will provide the current price of electricity",
+    "description": "Application that will provide price of electricity in DK",
 	"start_url": "./index.html",
 	"id": "./index.html",
 	"display": "standalone",

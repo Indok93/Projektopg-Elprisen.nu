@@ -7,19 +7,16 @@ export function DisplayNavigationBar(data, displayElement) {
 
     myNavBar.innerHTML = "";
 
-    let myNavHtml = "";
-
-    myNavHtml = `<nav id="navigation">
+    let myNavHtml = `<nav id="navigation">
     <img src="./assets/AppImages/windows11/SmallTile.scale-100.png" alt="logo">
     <ul>
         <li><a onclick="window._viewCallbacks.overviewClick('Oversigt')">oversigt</a></li>
-        <li><a onclick="window._viewCallbacks.homeClick('Home')" class="green-text">lige nu</a></li>
+        <li><a onclick="window._viewCallbacks.homeClick('Home')" class="greenText">lige nu</a></li>
         <li><a onclick="window._viewCallbacks.historyClick('History')">historik</a></li>
     </ul>
     </nav>`;
 
     myNavBar.innerHTML = myNavHtml;
-
 }
 
 // content area
@@ -85,8 +82,8 @@ export function DisplayFooterContent(data, displayElement) {
     const myFooterContent = document.querySelector(displayElement);
 
     let myFooterContentHtml = `
-    <p>Priserne er <span class="green-text"> ex. moms </span> og afgrifter</p>
-    <p>Du vises lige nu priserne for <span class="green-text"> Øst Danmark </span></p>
+    <p>Priserne er <span class="greenText spacing"> ex. moms </span> og afgrifter</p>
+    <p>Du vises lige nu priserne for <span class="greenText spacing"> Øst Danmark </span></p>
     `;
 
     myFooterContent.innerHTML = myFooterContentHtml;

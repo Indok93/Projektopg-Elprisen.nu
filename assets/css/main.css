@@ -381,9 +381,11 @@ footer p {
 footer p:first-child{
     margin-top: 1em;
 }
-.green-text{
+.greenText{
     color: #55EC20 !important;
-    /* margin: 0 0.2em; */
+}
+.spacing {
+    padding: 0 0.2em;
 }
 
 /* Media query for desktop */
